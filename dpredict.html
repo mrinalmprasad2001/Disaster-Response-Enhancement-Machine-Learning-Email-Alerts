@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drought Prediction</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drought Prediction</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}">
+    </head>
+</head>
+<body>
+    <div class="login-container">
+
+    <h2>Drought Prediction</h2>
+    <form id="inputForm" action="/dpredict" method="post">
+        <label for="value1">Abnormally Dry:</label><br>
+        <input type="text" id="value1" name="value1"><br>
+        <label for="value2">Moderate Drought:</label><br>
+        <input type="text" id="value2" name="value2"><br>
+        <label for="value3">Severe Drought:</label><br>
+        <input type="text" id="value3" name="value3"><br>
+        <label for="value4">Extreme Drought:</label><br>
+        <input type="text" id="value4" name="value4"><br>
+        <label for="value5">Exceptional Drought:</label><br>
+        <input type="text" id="value5" name="value5"><br>
+        <label for="value6">Abnormally Wet:</label><br>
+        <input type="text" id="value6" name="value6"><br>
+        <label for="value7">Moderate Wet:</label><br>
+        <input type="text" id="value7" name="value7"><br>
+        <label for="value8">Severe Wet:</label><br>
+        <input type="text" id="value8" name="value8"><br>
+        <label for="value9">Extreme Wet:</label><br>
+        <input type="text" id="value9" name="value9"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+    <h5 style="color:white; text-align: center;"><b>Enter the values in % format</b>
+
+        </h5>
+        <br><br>
+        <a href="/"><h1 style="color:black; text-align: center;">Flood Prediction</h1></a>
+</body>
+</html>

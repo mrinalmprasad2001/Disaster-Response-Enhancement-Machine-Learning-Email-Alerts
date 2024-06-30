@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Flood Prediction</h1>
+        <form action="/fpredict" method="post">
+            <div class="month-inputs">
+                {% for i in range(12) %}
+                    <div class="month-input">
+                        <label for="month_{{ i+1 }}">{{ month_names[i] }}:</label>
+                        <input type="text" id="month_{{ i+1 }}" name="month_{{ i+1 }}">
+                    </div>
+                {% endfor %}
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+    <br><br>
+    <a href="drought"><h1 style="color:black; text-align: center;">Drought Prediction</h1></a>
+</body>
+</html>
